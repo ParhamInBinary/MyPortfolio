@@ -38,5 +38,5 @@
     color: var(--primary);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    box-shadow: 1px 1px 15px var(--detail), -1px -1px 15px var(--detail);
+    box-shadow: 1px 1px 20px var(--detail);
 }
