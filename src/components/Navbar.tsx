@@ -1,13 +1,16 @@
 import { NavLink } from "react-router-dom";
+import './navbar.css';
 
 export function Navbar() {
     return (
-        <header>
-
-            <NavLink to="/">Home</NavLink>
-            <NavLink to="/about">About me</NavLink>
-            <NavLink to="/projects">Project</NavLink>
-            <NavLink to="/resume">Resume</NavLink>
+        <header className="navbar">
+            <div className="badge">{'<ParhamBerenjianDev />'}</div>
+            <div className="nav">
+            <NavLink className="link" to="/">Home</NavLink>
+            <NavLink className="link" to="/about">About me</NavLink>
+            <NavLink className="link" to="/projects">Project</NavLink>
+            <NavLink className="link" to="/resume">Resume</NavLink>
+            </div>
         </header>
     )
 }
