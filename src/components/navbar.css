@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&family=Poppins&family=Roboto&display=swap');
+
+:root {
+    --primary: #F9F7F7;
+    --secondary: #DBE2EF;
+    --detail: #3F72AF;
+    --text: #112D4E;
+}
+
+body {
+    background-color: var(--primary);
+}
+
+.navbar {
+    background-color: var(--secondary);
+    height: 5rem;
+    box-shadow: 0 3px 10px var(--detail);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5rem 0 2rem;
+}
+
+.badge {
+    background-color: var(--primary);
+    color: var(--text);
+    padding: .5rem;
+    border-radius: 55px;
+}
+
+.nav {
+    display: flex;
+    height: 100%;
+}
+
+.navbar .link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text);
+    font-size: large;
+    width: 8rem;
+    transition: 0.2s;
+}
+
+.navbar a.active {
+    background-color: var(--detail);
+    color: var(--primary);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
