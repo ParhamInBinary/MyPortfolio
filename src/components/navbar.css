@@ -1,16 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&family=Poppins&family=Roboto&display=swap');
 
-:root {
-    --primary: #F9F7F7;
-    --secondary: #DBE2EF;
-    --detail: #3F72AF;
-    --text: #112D4E;
-}
-
-body {
-    background-color: var(--primary);
-}
-
 .navbar {
     background-color: var(--secondary);
     height: 5rem;
