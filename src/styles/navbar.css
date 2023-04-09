@@ -1,9 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&family=Poppins&family=Roboto&display=swap');
 
 .navbar {
-    background-color: var(--secondary);
     height: 5rem;
-    box-shadow: 0 3px 10px var(--detail);
+    box-shadow: 0 1px 5px var(--detail);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -12,6 +11,7 @@
 
 .badge {
     background-color: var(--primary);
+    box-shadow: 1px 1px 15px var(--detail);
     color: var(--text);
     padding: .5rem;
     border-radius: 55px;
@@ -29,14 +29,11 @@
     text-decoration: none;
     color: var(--text);
     font-size: large;
-    width: 8rem;
+    padding: 0 2rem;
     transition: 0.2s;
 }
 
 .navbar a.active {
-    background-color: var(--detail);
-    color: var(--primary);
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    box-shadow: 1px 1px 20px var(--detail);
+    text-shadow: 1px 1px 15px var(--detail);
+    color: var(--detail);
 }
