@@ -6,19 +6,29 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 5rem 0 2rem;
+    width: 100%;
+    padding: 0 1rem 0 2rem;
+}
+
+.burger {
+    display: none;
 }
 
 .badge {
+    display: flex;
+    justify-content: center;
     background-color: var(--primary);
     box-shadow: 1px 1px 15px var(--detail);
     color: var(--text);
     padding: .5rem;
     border-radius: 55px;
+    width: 13rem;
 }
 
 .nav {
     display: flex;
+    justify-content: flex-end;
+    width: 100%;
     height: 100%;
 }
 
@@ -36,4 +46,24 @@
 .navbar a.active {
     text-shadow: 1px 1px 15px var(--detail);
     color: var(--detail);
+}
+
+@media screen and (max-width: 768px) {
+    
+}
+
+@media screen and (max-width: 480px) {
+
+    .navbar {
+        padding: 0 1rem;
+    }
+    
+    .badge {
+        font-size: 14px;
+        width: 11rem;
+    }
+
+    .nav {
+        display: none;
+    }
 }
