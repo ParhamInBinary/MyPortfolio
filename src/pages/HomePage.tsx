@@ -15,6 +15,7 @@ export function HomePage() {
   const [showGraphicDesign, setShowGraphicDesign] = useState(false);
 
   const CardContainer = document.querySelector('.CardContainer')
+  const idleAnimation = document.querySelector('.idleAnimation')
   
   const handleMouseOver = (skillType: string) => {
     if (skillType === "frontEnd") {
@@ -22,16 +23,19 @@ export function HomePage() {
       setShowBackEnd(false);
       setShowGraphicDesign(false);
       CardContainer?.classList.add('showSkills');
+      idleAnimation?.classList.add('hideIdle');
     } else if (skillType === "backEnd") {
       setShowFrontEnd(false);
       setShowBackEnd(true);
       setShowGraphicDesign(false);
       CardContainer?.classList.add('showSkills');
+      idleAnimation?.classList.add('hideIdle');
     } else if (skillType === "graphicDesign") {
       setShowFrontEnd(false);
       setShowBackEnd(false);
       setShowGraphicDesign(true);
       CardContainer?.classList.add('showSkills');
+      idleAnimation?.classList.add('hideIdle');
     }
   };
   
@@ -40,6 +44,7 @@ export function HomePage() {
     setShowBackEnd(false);
     setShowGraphicDesign(false);
     CardContainer?.classList.remove('showSkills');
+    idleAnimation?.classList.remove('hideIdle');
   }
 
   return (
@@ -95,6 +100,7 @@ export function HomePage() {
           </div>
         </div>
 
+        <div className="idleAnimation"></div>
         <div className="CardContainer">
           {showFrontEnd &&
             frontEndSkills.map((skill) => (
