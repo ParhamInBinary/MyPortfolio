@@ -1,0 +1,67 @@
+
+.burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    height: 100%;
+    width: 2rem;
+}
+
+.menuCurtain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 36px;
+    background-color: var(--text);
+    z-index: 1000;
+    width: 500%;
+    height: 200%;
+    border-radius: 100%;
+    transform: translate(0, -100%);
+    transition: all 0.8s ease-in-out;
+}
+
+.menuCurtain.displayMenu {
+    width: 100%;
+    height: 100%;
+    border-radius: 0%;
+    transform: translate(0);
+}
+
+.xBtn {
+    position: inherit;
+    top: 0;
+    right: 0;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    color: var(--primary);
+}
+
+.linkContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+.burgerLink {
+    text-decoration: none;
+    color: var(--detail);
+}
+
+.menuCurtain a.active {
+    color: var(--secondary);
+    text-shadow: 1px 1px 15px var(--primary);
+}
+
+.burgerline {
+    width: 80%;
+    height: 3px;
+    background-color: var(--text);
+    margin: 3px;
+}
