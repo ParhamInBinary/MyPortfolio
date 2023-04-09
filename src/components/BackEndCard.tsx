@@ -10,7 +10,10 @@ export function BackEndCard({ skill }: Skill) {
         <div className="outerBody">
             <div className="borderAnimaion"></div>
             <div className="cardBody">
-                <div>{skill.image}</div>
+                <div className='icon'>
+                    <div className="backgroundBlob"></div>
+                    {skill.image}
+                </div>
                 <p>{skill.name}</p>
             </div>
         </div>
