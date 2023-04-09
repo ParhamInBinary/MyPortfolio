@@ -43,9 +43,21 @@
     border-radius: 10px;
     background-color: rgba(92, 136, 189);
     z-index: 1;
+    position: relative;
 }
 
-.cardBody div {
+.backgroundBlob {
+  position: absolute;
+  background-color: rgba(219,226,239, 0.2);
+  filter: blur(.1rem);
+  box-shadow: 1px 1px 40px;
+  width: 70px;
+  height: 70px;
+  border-radius: 100px;
+  z-index: -1;
+}
+
+.cardBody .icon {
     display: flex;
     align-items: center;
     height: 100%;
