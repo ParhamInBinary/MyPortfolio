@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import { BackEndCard } from "../components/BackEndCard";
@@ -9,6 +10,38 @@ import { frontEndSkills } from "../data/frontEndSkills";
 import "../styles/HomePage.css";
 
 export function HomePage() {
+  const [showFrontEnd, setShowFrontEnd] = useState(false);
+  const [showBackEnd, setShowBackEnd] = useState(false);
+  const [showGraphicDesign, setShowGraphicDesign] = useState(false);
+
+  const CardContainer = document.querySelector('.CardContainer')
+  
+  const handleMouseOver = (skillType: string) => {
+    if (skillType === "frontEnd") {
+      setShowFrontEnd(true);
+      setShowBackEnd(false);
+      setShowGraphicDesign(false);
+      CardContainer?.classList.add('showSkills');
+    } else if (skillType === "backEnd") {
+      setShowFrontEnd(false);
+      setShowBackEnd(true);
+      setShowGraphicDesign(false);
+      CardContainer?.classList.add('showSkills');
+    } else if (skillType === "graphicDesign") {
+      setShowFrontEnd(false);
+      setShowBackEnd(false);
+      setShowGraphicDesign(true);
+      CardContainer?.classList.add('showSkills');
+    }
+  };
+  
+  const handleHideSkills = () => {    
+    setShowFrontEnd(false);
+    setShowBackEnd(false);
+    setShowGraphicDesign(false);
+    CardContainer?.classList.remove('showSkills');
+  }
+
   return (
     <div className="container">
       <div className="presentation">
@@ -39,28 +72,43 @@ export function HomePage() {
         
         <p>My qualifications in:</p>
         <div className="titleContainer">
-          <div className="skillTitle">FrontEnd</div>
-          <div className="skillTitle">BackEnd</div>
-          <div className="skillTitle">Graphic Design</div>
+          <div
+            className="skillTitle"
+            onMouseOver={() => handleMouseOver("frontEnd")}
+            onMouseLeave={() => handleHideSkills()}
+            >
+            FrontEnd
+          </div>
+          <div
+            className="skillTitle"
+            onMouseOver={() => handleMouseOver("backEnd")}
+            onMouseLeave={() => handleHideSkills()}
+            >
+            BackEnd
+          </div>
+          <div
+            className="skillTitle"
+            onMouseOver={() => handleMouseOver("graphicDesign")}
+            onMouseLeave={() => handleHideSkills()}
+          >
+            Graphic Design
+          </div>
         </div>
 
         <div className="CardContainer">
-          {frontEndSkills.map((skill) => (
-            <FrontEndCard key={skill.id} skill={skill} />
-          ))}
+          {showFrontEnd &&
+            frontEndSkills.map((skill) => (
+              <FrontEndCard key={skill.id} skill={skill} />
+            ))}
+          {showBackEnd &&
+            backEndSkills.map((skill) => (
+              <BackEndCard key={skill.id} skill={skill} />
+            ))}
+          {showGraphicDesign &&
+            graphicDesignSkills.map((skill) => (
+              <GraphicDesignCard key={skill.id} skill={skill} />
+            ))}
         </div>
-
-        {/* <div className="CardContainer">
-          {backEndSkills.map((skill) => (
-            <BackEndCard key={skill.id} skill={skill} />
-          ))}
-        </div>
-
-        <div className="CardContainer">
-          {graphicDesignSkills.map((skill) => (
-            <GraphicDesignCard key={skill.id} skill={skill} />
-          ))}
-        </div> */}
       </div>
     </div>
   );
