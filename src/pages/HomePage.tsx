@@ -36,6 +36,14 @@ export function HomePage() {
         </div>
       </div>
       <div className="skillContainer">
+        
+        <p>My qualifications in:</p>
+        <div className="titleContainer">
+          <div className="skillTitle">FrontEnd</div>
+          <div className="skillTitle">BackEnd</div>
+          <div className="skillTitle">Graphic Design</div>
+        </div>
+
         <div className="CardContainer">
           {frontEndSkills.map((skill) => (
             <FrontEndCard key={skill.id} skill={skill} />
