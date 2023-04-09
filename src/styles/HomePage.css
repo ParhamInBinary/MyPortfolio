@@ -65,30 +65,30 @@
     width: 100%;
     margin-top: 3rem;
     color: var(--text);
+
 }
 
 .CardContainer {
     display: flex;
     justify-content: space-evenly;
+    width: 0%;
+    opacity: 0;
+    transition: width 0.3s ease-in-out;
+}
+
+.CardContainer.showSkills {
+    opacity: 1;
     width: 70%;
 }
 
 .titleContainer {
     display: flex;
-    justify-content: space-evenly;
-    width: 40%;
+    justify-content: center;
+    width: 100%;
+    gap: 3rem;
     padding: 1rem;
     margin-bottom: 2rem;
 }
-
-/* .skillTitle {
-    padding: 0 .5rem;
-}
-
-.skillTitle:hover {
-    color: var(--secondary);
-    background-color: var(--detail);
-} */
 
 .skillTitle:after {
     content: '';
