@@ -68,47 +68,6 @@
     position: relative;
 }
 
-.CardContainer {
-    display: flex;
-    justify-content: center;
-    gap: 3rem;
-    width: 0%;
-    transition: all 0.6s ease-in-out;
-}
-
-.CardContainer.showSkills {
-    width: 100%;
-}
-
-@keyframes idleAnimaion {
-    0% {
-      transform: scale(0.9);
-    }
-    50% {
-      transform: scale(1.1);
-    }
-    100% {
-        transform: scale(0.9);
-    }
-  }
-
-.idleAnimation {
-    background-color: var(--detail);
-    filter: blur(1rem);
-    position: absolute;
-    top: 160%;
-    width: 50%;
-    height: 30%;
-    border-radius: 60%;
-    animation-name: idleAnimaion;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-}
-.idleAnimation.hideIdle {
-    display: none;
-}
-
 .titleContainer {
     display: flex;
     justify-content: center;
@@ -159,4 +118,144 @@
 	overflow: hidden;
 	z-index: 1;
     color: var(--text);
+}
+
+.CardContainer {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    width: 0%;
+    transition: all 0.6s ease-in-out;
+}
+
+.CardContainer.showSkills {
+    width: 100%;
+}
+
+@keyframes idleAnimaion {
+    0% {
+      transform: scale(0.9);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+        transform: scale(0.9);
+    }
+  }
+
+.idleAnimation {
+    background-color: var(--detail);
+    filter: blur(1rem);
+    position: absolute;
+    top: 160%;
+    width: 50%;
+    height: 30%;
+    border-radius: 60%;
+    animation-name: idleAnimaion;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.idleAnimation.hideIdle {
+    display: none;
+}
+
+.skillContainerMobile {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .presentation {
+        display: flex;
+        margin-top: 7rem;
+    }
+
+    .introText p{
+        font-size: 20px;
+    }
+    .introText span{
+        font-size: 35px;
+    }
+
+    .picture {
+        width: 9rem;
+        height: 9rem;
+    }
+
+    .logos {
+        margin-right: 22rem;
+    }
+
+    .skillContainer {
+        display: none;
+    }
+
+    .skillContainerMobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2rem;
+    }
+
+    .skillTypeMobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 3rem;
+    }
+
+    .skillTypeMobile span {
+        margin-bottom: 2rem;
+    }
+
+    .skillCardsMobile {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .presentation {
+        align-items: flex-start;
+    }
+
+    .profile {
+        position: relative;
+        width: 100%;
+        padding: 0 1rem;
+    }
+
+    .picture {
+        position: absolute;
+        right: 0;
+    }
+
+    .logos {
+        margin-left: 1rem;
+    }
+
+    .introText {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .introText p{
+        font-size: 15px;
+    }
+    .introText span{
+        font-size: 28px;
+    }
+
 }
