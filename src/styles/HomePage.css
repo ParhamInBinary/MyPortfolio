@@ -73,12 +73,10 @@
     justify-content: center;
     gap: 3rem;
     width: 0%;
-    opacity: .5;
-    transition: all 0.7s ease-in-out;
+    transition: all 0.6s ease-in-out;
 }
 
 .CardContainer.showSkills {
-    opacity: 1;
     width: 100%;
 }
 
