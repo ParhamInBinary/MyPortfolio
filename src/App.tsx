@@ -6,7 +6,6 @@ import { HomePage } from "./pages/HomePage";
 import { ProjectsPage } from "./pages/ProjectsPage";
 import { ResumePage } from "./pages/ResumePage";
 
-
 export function App() {
   return (
     <div className="App">
@@ -15,11 +14,14 @@ export function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutMePage />} />
-          <Route path="/projects" element={<ProjectsPage />} />
+          <Route
+            path="/projects"
+            element={<ProjectsPage />}
+          />
           <Route path="/resume" element={<ResumePage />} />
         </Routes>
       </main>
       <Footer />
     </div>
-  )
+  );
 }

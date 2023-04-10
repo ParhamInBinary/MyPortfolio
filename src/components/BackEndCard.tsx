@@ -1,21 +1,21 @@
-import { BackEndSkill } from '../data/backEndSkills';
-import '../styles/skillCard.css';
+import { BackEndSkill } from "../data/backEndSkills";
+import "../styles/skillCard.css";
 
 interface Skill {
-    skill: BackEndSkill
+  skill: BackEndSkill;
 }
 
 export function BackEndCard({ skill }: Skill) {
-    return (
-        <div className="outerBody">
-            <div className="borderAnimaion"></div>
-            <div className="cardBody">
-                <div className='icon'>
-                    <div className="backgroundBlob"></div>
-                    {skill.image}
-                </div>
-                <p>{skill.name}</p>
-            </div>
+  return (
+    <div className="outerBody">
+      <div className="borderAnimaion"></div>
+      <div className="cardBody">
+        <div className="icon">
+          <div className="backgroundBlob"></div>
+          {skill.image}
         </div>
-    )
+        <p>{skill.name}</p>
+      </div>
+    </div>
+  );
 }

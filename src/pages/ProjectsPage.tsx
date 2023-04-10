@@ -1,6 +1,3 @@
 export function ProjectsPage() {
-    return (
-        <>
-        </>
-    )
+  return <></>;
 }

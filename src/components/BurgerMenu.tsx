@@ -12,23 +12,33 @@ export function BurgerMenu() {
       menu?.classList.add("displayMenu");
     }
   };
-  
+
   const handleCloseMenu = () => {
     const menu = document.querySelector(".menuCurtain");
     if (isMenuOpen) {
       setIsMenuOpen(false);
       menu?.classList.remove("displayMenu");
     }
-  }
+  };
 
   return (
-    <div className="burger" onClick={() => handleOpenMenu()}>
+    <div
+      className="burger"
+      onClick={() => handleOpenMenu()}
+    >
       <div className="menuCurtain">
-        <div className="xBtn" onClick={() => handleCloseMenu()}>
+        <div
+          className="xBtn"
+          onClick={() => handleCloseMenu()}
+        >
           &times;
         </div>
         <div className="linkContainer">
-          <NavLink to="/" className="burgerLink" onClick={() => handleCloseMenu()}>
+          <NavLink
+            to="/"
+            className="burgerLink"
+            onClick={() => handleCloseMenu()}
+          >
             Home
           </NavLink>
           <NavLink

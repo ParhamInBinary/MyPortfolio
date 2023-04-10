@@ -12,11 +12,16 @@ import "../styles/HomePage.css";
 export function HomePage() {
   const [showFrontEnd, setShowFrontEnd] = useState(false);
   const [showBackEnd, setShowBackEnd] = useState(false);
-  const [showGraphicDesign, setShowGraphicDesign] = useState(false);
+  const [showGraphicDesign, setShowGraphicDesign] =
+    useState(false);
   const [showSkills, setShowSkills] = useState(false);
 
-  const CardContainer = document.querySelector(".CardContainer");
-  const idleAnimation = document.querySelector(".idleAnimation");
+  const CardContainer = document.querySelector(
+    ".CardContainer"
+  );
+  const idleAnimation = document.querySelector(
+    ".idleAnimation"
+  );
 
   const handleMouseOver = (skillType: string) => {
     setShowSkills(true);
@@ -94,14 +99,18 @@ export function HomePage() {
           </div>
           <div
             className="skillTitle"
-            onMouseOver={() => handleMouseOver("graphicDesign")}
+            onMouseOver={() =>
+              handleMouseOver("graphicDesign")
+            }
             onMouseLeave={() => handleHideSkills()}
           >
             Graphic Design
           </div>
         </div>
 
-        {!showSkills && <div className="idleAnimation"></div>}
+        {!showSkills && (
+          <div className="idleAnimation"></div>
+        )}
         <div className="CardContainer">
           {showFrontEnd &&
             frontEndSkills.map((skill) => (
@@ -113,7 +122,10 @@ export function HomePage() {
             ))}
           {showGraphicDesign &&
             graphicDesignSkills.map((skill) => (
-              <GraphicDesignCard key={skill.id} skill={skill} />
+              <GraphicDesignCard
+                key={skill.id}
+                skill={skill}
+              />
             ))}
         </div>
       </div>
@@ -141,7 +153,10 @@ export function HomePage() {
           <span>Graphic Design</span>
           <div className="skillCardsMobile">
             {graphicDesignSkills.map((skill) => (
-              <GraphicDesignCard key={skill.id} skill={skill} />
+              <GraphicDesignCard
+                key={skill.id}
+                skill={skill}
+              />
             ))}
           </div>
         </div>
