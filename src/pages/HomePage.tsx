@@ -14,7 +14,6 @@ export function HomePage() {
   const [showBackEnd, setShowBackEnd] = useState(false);
   const [showGraphicDesign, setShowGraphicDesign] =
     useState(false);
-  const [showSkills, setShowSkills] = useState(false);
 
   const CardContainer = document.querySelector(
     ".CardContainer"
@@ -24,29 +23,25 @@ export function HomePage() {
   );
 
   const handleMouseOver = (skillType: string) => {
-    setShowSkills(true);
     CardContainer?.classList.add("showSkills");
     idleAnimation?.classList.add("hideIdle");
 
-    if (!showSkills) {
-      if (skillType === "frontEnd") {
-        setShowFrontEnd(true);
-        setShowBackEnd(false);
-        setShowGraphicDesign(false);
-      } else if (skillType === "backEnd") {
-        setShowFrontEnd(false);
-        setShowBackEnd(true);
-        setShowGraphicDesign(false);
-      } else if (skillType === "graphicDesign") {
-        setShowFrontEnd(false);
-        setShowBackEnd(false);
-        setShowGraphicDesign(true);
-      }
+    if (skillType === "frontEnd") {
+      setShowFrontEnd(true);
+      setShowBackEnd(false);
+      setShowGraphicDesign(false);
+    } else if (skillType === "backEnd") {
+      setShowFrontEnd(false);
+      setShowBackEnd(true);
+      setShowGraphicDesign(false);
+    } else if (skillType === "graphicDesign") {
+      setShowFrontEnd(false);
+      setShowBackEnd(false);
+      setShowGraphicDesign(true);
     }
   };
-
+  
   const handleHideSkills = () => {
-    setShowSkills(false);
     CardContainer?.classList.remove("showSkills");
     idleAnimation?.classList.remove("hideIdle");
   };
@@ -105,9 +100,7 @@ export function HomePage() {
           </div>
         </div>
 
-        {!showSkills && (
-          <div className="idleAnimation"></div>
-        )}
+        <div className="idleAnimation"></div>
         <div className="CardContainer">
           {showFrontEnd &&
             frontEndSkills.map((skill) => (
