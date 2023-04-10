@@ -5,45 +5,50 @@ import "../styles/burgerMenu.css";
 export function BurgerMenu() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const handleMenu = () => {
+  const handleOpenMenu = () => {
     const menu = document.querySelector(".menuCurtain");
     if (!isMenuOpen) {
       setIsMenuOpen(true);
       menu?.classList.add("displayMenu");
-    } else {
+    }
+  };
+  
+  const handleCloseMenu = () => {
+    const menu = document.querySelector(".menuCurtain");
+    if (isMenuOpen) {
       setIsMenuOpen(false);
       menu?.classList.remove("displayMenu");
     }
-  };
+  }
 
   return (
-    <div className="burger" onClick={() => handleMenu()}>
+    <div className="burger" onClick={() => handleOpenMenu()}>
       <div className="menuCurtain">
-        <div className="xBtn" onClick={() => handleMenu()}>
+        <div className="xBtn" onClick={() => handleCloseMenu()}>
           &times;
         </div>
         <div className="linkContainer">
-          <NavLink to="/" className="burgerLink" onClick={() => handleMenu()}>
+          <NavLink to="/" className="burgerLink" onClick={() => handleCloseMenu()}>
             Home
           </NavLink>
           <NavLink
             to="/about"
             className="burgerLink"
-            onClick={() => handleMenu()}
+            onClick={() => handleCloseMenu()}
           >
             About me
           </NavLink>
           <NavLink
             to="/projects"
             className="burgerLink"
-            onClick={() => handleMenu()}
+            onClick={() => handleCloseMenu()}
           >
             Projects
           </NavLink>
           <NavLink
             to="/resume"
             className="burgerLink"
-            onClick={() => handleMenu()}
+            onClick={() => handleCloseMenu()}
           >
             Resume
           </NavLink>
