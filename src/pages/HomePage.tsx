@@ -46,9 +46,6 @@ export function HomePage() {
   };
 
   const handleHideSkills = () => {
-    setShowFrontEnd(false);
-    setShowBackEnd(false);
-    setShowGraphicDesign(false);
     setShowSkills(false);
     CardContainer?.classList.remove("showSkills");
     idleAnimation?.classList.remove("hideIdle");
