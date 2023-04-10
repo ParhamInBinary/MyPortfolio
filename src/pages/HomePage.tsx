@@ -13,39 +13,41 @@ export function HomePage() {
   const [showFrontEnd, setShowFrontEnd] = useState(false);
   const [showBackEnd, setShowBackEnd] = useState(false);
   const [showGraphicDesign, setShowGraphicDesign] = useState(false);
+  const [showSkills, setShowSkills] = useState(false);
 
-  const CardContainer = document.querySelector('.CardContainer')
-  const idleAnimation = document.querySelector('.idleAnimation')
-  
+  const CardContainer = document.querySelector(".CardContainer");
+  const idleAnimation = document.querySelector(".idleAnimation");
+
   const handleMouseOver = (skillType: string) => {
-    if (skillType === "frontEnd") {
-      setShowFrontEnd(true);
-      setShowBackEnd(false);
-      setShowGraphicDesign(false);
-      CardContainer?.classList.add('showSkills');
-      idleAnimation?.classList.add('hideIdle');
-    } else if (skillType === "backEnd") {
-      setShowFrontEnd(false);
-      setShowBackEnd(true);
-      setShowGraphicDesign(false);
-      CardContainer?.classList.add('showSkills');
-      idleAnimation?.classList.add('hideIdle');
-    } else if (skillType === "graphicDesign") {
-      setShowFrontEnd(false);
-      setShowBackEnd(false);
-      setShowGraphicDesign(true);
-      CardContainer?.classList.add('showSkills');
-      idleAnimation?.classList.add('hideIdle');
+    setShowSkills(true);
+    CardContainer?.classList.add("showSkills");
+    idleAnimation?.classList.add("hideIdle");
+
+    if (!showSkills) {
+      if (skillType === "frontEnd") {
+        setShowFrontEnd(true);
+        setShowBackEnd(false);
+        setShowGraphicDesign(false);
+      } else if (skillType === "backEnd") {
+        setShowFrontEnd(false);
+        setShowBackEnd(true);
+        setShowGraphicDesign(false);
+      } else if (skillType === "graphicDesign") {
+        setShowFrontEnd(false);
+        setShowBackEnd(false);
+        setShowGraphicDesign(true);
+      }
     }
   };
-  
-  const handleHideSkills = () => {    
+
+  const handleHideSkills = () => {
     setShowFrontEnd(false);
     setShowBackEnd(false);
     setShowGraphicDesign(false);
-    CardContainer?.classList.remove('showSkills');
-    idleAnimation?.classList.remove('hideIdle');
-  }
+    setShowSkills(false);
+    CardContainer?.classList.remove("showSkills");
+    idleAnimation?.classList.remove("hideIdle");
+  };
 
   return (
     <div className="container">
@@ -74,21 +76,20 @@ export function HomePage() {
         </div>
       </div>
       <div className="skillContainer">
-        
         <p>My qualifications in:</p>
         <div className="titleContainer">
           <div
             className="skillTitle"
             onMouseOver={() => handleMouseOver("frontEnd")}
             onMouseLeave={() => handleHideSkills()}
-            >
+          >
             FrontEnd
           </div>
           <div
             className="skillTitle"
             onMouseOver={() => handleMouseOver("backEnd")}
             onMouseLeave={() => handleHideSkills()}
-            >
+          >
             BackEnd
           </div>
           <div
@@ -100,7 +101,7 @@ export function HomePage() {
           </div>
         </div>
 
-        <div className="idleAnimation"></div>
+        {!showSkills && <div className="idleAnimation"></div>}
         <div className="CardContainer">
           {showFrontEnd &&
             frontEndSkills.map((skill) => (
