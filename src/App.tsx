@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router";
 import { Footer } from "./components/Footer";
 import { Navbar } from "./components/Navbar";
 import { AboutMePage } from "./pages/AboutMePage";
-import { HomePage } from "./pages/HomePage";
+import { HomePage } from "./pages/HomePage/HomePage";
 import { ProjectsPage } from "./pages/ProjectsPage";
 import { ResumePage } from "./pages/ResumePage";
 
