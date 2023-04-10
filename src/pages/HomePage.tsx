@@ -117,6 +117,35 @@ export function HomePage() {
             ))}
         </div>
       </div>
+
+      <div className="skillContainerMobile">
+        <p>My qualifications in:</p>
+
+        <div className="skillTypeMobile">
+          <span>FrontEnd</span>
+          <div className="skillCardsMobile">
+            {frontEndSkills.map((skill) => (
+              <FrontEndCard key={skill.id} skill={skill} />
+            ))}
+          </div>
+        </div>
+        <div className="skillTypeMobile">
+          <span>BackEnd</span>
+          <div className="skillCardsMobile">
+            {backEndSkills.map((skill) => (
+              <BackEndCard key={skill.id} skill={skill} />
+            ))}
+          </div>
+        </div>
+        <div className="skillTypeMobile">
+          <span>Graphic Design</span>
+          <div className="skillCardsMobile">
+            {graphicDesignSkills.map((skill) => (
+              <GraphicDesignCard key={skill.id} skill={skill} />
+            ))}
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
