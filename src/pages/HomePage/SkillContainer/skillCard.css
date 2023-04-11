@@ -22,7 +22,7 @@
 
 .borderAnimaion {
     position: absolute;
-    background: conic-gradient(var(--detail) 20deg, transparent 120deg);
+    background: conic-gradient(var(--detail) 20deg, var(--secondary) 60deg, transparent 120deg);
     filter: blur(.3rem);
     height: 150%;
     width: 200%;
