@@ -13,19 +13,19 @@
 
 @keyframes borderAnimaion {
   from {
-    transform: rotate(0deg);
+    transform: rotate(360deg);
   }
   to {
-    transform: rotate(359deg);
+    transform: rotate(0deg);
   }
 }
 
 .borderAnimaion {
     position: absolute;
-    background: linear-gradient(to left, #87b6ef, #3F72AF 50%, #87b6ef);
+    background: conic-gradient(var(--detail) 20deg, transparent 120deg);
     filter: blur(.3rem);
     height: 150%;
-    width: 50px;
+    width: 200%;
     animation-name: borderAnimaion;
     animation-duration: 3s;
     animation-iteration-count: infinite;
