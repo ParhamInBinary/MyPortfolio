@@ -1,10 +1,10 @@
 import { Route, Routes } from "react-router";
 import { Footer } from "./components/Footer";
 import { Navbar } from "./components/Navbar/Navbar";
-import { AboutMePage } from "./pages/AboutMePage";
+import { AboutMePage } from "./pages/AboutMePage/AboutMePage";
 import { HomePage } from "./pages/HomePage/HomePage";
-import { ProjectsPage } from "./pages/ProjectsPage";
-import { ResumePage } from "./pages/ResumePage";
+import { ProjectsPage } from "./pages/ProjectsPage/ProjectsPage";
+import { ResumePage } from "./pages/ResumePage/ResumePage";
 
 export function App() {
   return (
