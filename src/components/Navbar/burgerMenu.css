@@ -1,4 +1,5 @@
 @media screen and (max-width: 768px) {
+  
   .burger {
     display: flex;
     flex-direction: column;
@@ -49,13 +50,14 @@
     align-items: center;
     gap: 5rem;
   }
+  
   .burgerLink {
     text-decoration: none;
     color: var(--detail);
   }
 
   .menuCurtain a.active {
-    color: var(--secondary);
+    color: var(--primary);
     text-shadow: 1px 1px 15px var(--primary);
   }
 

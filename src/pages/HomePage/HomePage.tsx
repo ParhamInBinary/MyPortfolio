@@ -36,7 +36,7 @@ export function HomePage() {
           </NavLink>
         </div>
       </div>
-      
+
       <SkillContainer />
 
       <div className="skillContainerMobile">

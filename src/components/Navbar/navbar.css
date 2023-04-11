@@ -1,69 +1,70 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&family=Poppins&family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&family=Poppins&family=Roboto&display=swap");
 
 .navbar {
-    height: 5rem;
-    box-shadow: 0 1px 5px var(--detail);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 0 1rem 0 2rem;
+  height: 5rem;
+  box-shadow: 0 1px 5px var(--detail);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 1rem 0 2rem;
 }
 
 .burger {
-    display: none;
+  display: none;
 }
 
 .badge {
-    display: flex;
-    justify-content: center;
-    background-color: var(--primary);
-    box-shadow: 1px 1px 15px var(--detail);
-    color: var(--text);
-    padding: .5rem;
-    border-radius: 55px;
-    width: 13rem;
+  display: flex;
+  justify-content: center;
+  background-color: var(--primary);
+  box-shadow: 1px 1px 15px var(--detail);
+  color: var(--text);
+  padding: 0.5rem;
+  border-radius: 55px;
+  width: 13rem;
 }
 
 .nav {
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
-    height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  height: 100%;
 }
 
 .navbar .link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    color: var(--text);
-    font-size: large;
-    padding: 0 2rem;
-    transition: 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: var(--text);
+  font-size: large;
+  padding: 0 2rem;
+  transition: 0.2s;
 }
 
 .navbar a.active {
-    text-shadow: 1px 1px 15px var(--detail);
-    color: var(--detail);
+  text-shadow: 1px 1px 15px var(--detail);
+  color: var(--detail);
 }
 
 @media screen and (max-width: 768px) {
-    .nav {
-        display: none;
-    }
-    
+  .burger {
+    display: flex;
+  }
+
+  .nav {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 480px) {
+  .navbar {
+    padding: 0 1rem;
+  }
 
-    .navbar {
-        padding: 0 1rem;
-    }
-    
-    .badge {
-        font-size: 14px;
-        width: 11rem;
-    }
-
+  .badge {
+    font-size: 14px;
+    width: 11rem;
+  }
 }
