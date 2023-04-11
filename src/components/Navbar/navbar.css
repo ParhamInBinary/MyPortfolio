@@ -43,7 +43,7 @@
   transition: 0.2s;
 }
 
-.navbar a.active {
+.nav a.active {
   text-shadow: 1px 1px 15px var(--detail);
   color: var(--detail);
 }
