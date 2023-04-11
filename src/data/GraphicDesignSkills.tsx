@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import { SiAdobephotoshop, SiFigma } from "react-icons/si";
+import { BsBrushFill } from "react-icons/bs";
 
 export interface GraphicDesignSkill {
   id: number;
@@ -7,6 +8,11 @@ export interface GraphicDesignSkill {
   image: ReactNode;
 }
 export const graphicDesignSkills: GraphicDesignSkill[] = [
+  {
+    id: 1,
+    name: "Procreate",
+    image: <BsBrushFill />,
+  },
   {
     id: 2,
     name: "Photoshop",
