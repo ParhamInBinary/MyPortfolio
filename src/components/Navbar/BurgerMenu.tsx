@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import "../styles/burgerMenu.css";
+import "./burgerMenu.css";
 
 export function BurgerMenu() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

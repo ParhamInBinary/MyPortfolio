@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
-import "../styles/navbar.css";
 import { BurgerMenu } from "./BurgerMenu";
+import "./navbar.css";
 
 export function Navbar() {
   return (
