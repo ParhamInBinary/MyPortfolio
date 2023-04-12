@@ -16,6 +16,10 @@ body {
   background-color: var(--primary);
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 main {
   display: flex;
   justify-content: center;

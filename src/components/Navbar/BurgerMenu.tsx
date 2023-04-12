@@ -7,17 +7,21 @@ export function BurgerMenu() {
 
   const handleOpenMenu = () => {
     const menu = document.querySelector(".menuCurtain");
+    const body = document.querySelector('body');
     if (!isMenuOpen) {
       setIsMenuOpen(true);
       menu?.classList.add("displayMenu");
+      body?.classList.add('no-scroll')
     }
   };
-
+  
   const handleCloseMenu = () => {
+    const body = document.querySelector('body');
     const menu = document.querySelector(".menuCurtain");
     if (isMenuOpen) {
       setIsMenuOpen(false);
       menu?.classList.remove("displayMenu");
+      body?.classList.remove('no-scroll')
     }
   };
 

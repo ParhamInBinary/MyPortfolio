@@ -225,6 +225,10 @@
     flex-wrap: wrap;
     gap: 2rem;
   }
+
+  .overflowHidden {
+    overflow: hidden;
+  }
 }
 
 @media screen and (max-width: 480px) {
