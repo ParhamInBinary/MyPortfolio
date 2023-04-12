@@ -1,8 +1,11 @@
+import './AboutMePage.css'
+
 export function AboutMePage() {
   return (
     <div className="aboutMeContainer">
       <h1>Hello,</h1>
       <div>
+        
         and welcome to my portfolio! My name is Parham
         Berenjian, and I'm a fullstack developer with a
         passion for creating engaging, user-friendly
