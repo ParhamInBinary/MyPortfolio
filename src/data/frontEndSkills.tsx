@@ -4,7 +4,7 @@ import {
   FaHtml5,
   FaReact,
 } from "react-icons/fa";
-import { SiJavascript, SiTypescript } from "react-icons/si";
+import { SiJavascript, SiTypescript, SiPreact } from "react-icons/si";
 
 export interface FrontEndSkill {
   id: number;
@@ -19,21 +19,26 @@ export const frontEndSkills: FrontEndSkill[] = [
   },
   {
     id: 2,
+    name: "Preact",
+    image: <SiPreact />,
+  },
+  {
+    id: 3,
     name: "Javascript",
     image: <SiJavascript />,
   },
   {
-    id: 3,
+    id: 4,
     name: "Typescript",
     image: <SiTypescript />,
   },
   {
-    id: 4,
+    id: 5,
     name: "HTML",
     image: <FaHtml5 />,
   },
   {
-    id: 5,
+    id: 6,
     name: "CSS",
     image: <FaCss3Alt />,
   },
