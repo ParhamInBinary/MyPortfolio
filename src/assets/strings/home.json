@@ -1,0 +1,22 @@
+{
+  "header": {
+    "home": "HOME",
+    "projects": "PROJECTS",
+    "aboutMe": "ABOUT ME",
+    "resume": "RESUME",
+    "contact": "CONTACT"
+  },
+  "name": {
+    "firstname": "PARHAM",
+    "lastname": "BERENJIAN"
+  },
+  "role": {
+    "firstHalf": "FULLSTACK",
+    "secondHalf": "DEVELOPER"
+  },
+  "slogan": {
+    "title": "Coding Alchemist",
+    "subtitleRegular": "Turning ideas into",
+    "subtitleStyled": "Digital Gold"
+  }
+}

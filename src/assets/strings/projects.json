@@ -1,0 +1,11 @@
+{
+  "qurie": {
+    "title": "Qurie",
+    "desc": "fill this",
+    "build": {
+      "react": "React",
+      "ts": "TypeScript",
+      "gql": "GraphQL"
+    }
+  }
+}

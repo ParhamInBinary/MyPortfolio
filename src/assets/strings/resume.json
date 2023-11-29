@@ -1,0 +1,55 @@
+{
+  "title": {
+    "education": "EDUCATION",
+    "workExp": "WORK EXPERIENCE",
+    "qualifications": "QUALIFICATIONS"
+  },
+  "school": {
+    "medieinstitutet": {
+      "title": "Medieinstitutet",
+      "date": "SEP. 2022 - MAY 2024",
+      "subtitle": "An overarching Frontend education with elements of Backend, encompassing courses in:",
+      "courses": {
+        "first": {
+          "title": "JavaScript",
+          "desc": "Comprehensive knowledge and applications"
+        },
+        "second": {
+          "title": "Dynamic web development",
+          "desc": "Inclusive of Backend"
+        },
+        "third": {
+          "title": "Work methodologies",
+          "desc": "Unit, integration, & E2E testing"
+        },
+        "fourth": {
+          "title": "UX/UI design",
+          "desc": "Theoretical foundation and practical experience using Adobe Photoshop & Illustrator"
+        }
+      }
+    },
+    "johnBauer": {
+      "title": "John Bauer High School",
+      "date": "AUG. 2010 - JUN. 2013",
+      "subtitle": "Focus on IT with extensive studies in:",
+      "courses": {
+        "first": {
+          "title": "Server management and hardware"
+        },
+        "second": {
+          "title": "Programming and computer proficiency"
+        }
+      }
+    }
+  },
+  "workExp": {
+    "lunaCreatives": {
+      "title": "Luna Creatives - Internship",
+      "date": "SEP. 2023 - NOV. 2023",
+      "desc": "During my tenure at Luna Creatives as an intern and as part of Learning in the Workforce (LIA), I assumed responsibility for Frontend development with integrated Backend tasks. My primary project centered around creating an educational tool tailored for primary schools."
+    }
+  },
+  "qualifications": {
+    "desc": "Proficient in React, TypeScript, NodeJS, MongoDB, and GraphQL, I specialize in crafting dynamic web solutions. From intuitive interfaces using React and TypeScript to robust Backends with NodeJS and MongoDB, my expertise ensures efficient and innovative digital solutions."
+  }
+}
