@@ -1,10 +1,12 @@
-function App() {
+import { Header } from './components';
+import { Container } from './styles';
 
+function App() {
   return (
-    <div>
-      first commit
-    </div>
-  )
+    <Container>
+      <Header />
+    </Container>
+  );
 }
 
-export default App
+export default App;
