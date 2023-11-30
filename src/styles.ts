@@ -9,6 +9,6 @@ export const Container = styled(Box)(() => ({
   height: '100vh',
   background: `url(${backgroundImage})`,
   backgroundSize: 'cover',
-  backgroundPosition: -5,
+  backgroundPosition: 'center',
   backgroundRepeat: 'no-repeat',
 }));
