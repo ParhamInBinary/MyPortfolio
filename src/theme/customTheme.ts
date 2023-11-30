@@ -1,5 +1,6 @@
 import { createTheme } from '@mui/material/styles';
 
+
 export const customTheme = createTheme({
   // palette: {
   //   primary: {
@@ -19,9 +20,8 @@ export const customTheme = createTheme({
       fontSize: '36px',
     },
     h3: {
-      fontSize: '32px',
-      fontWeight: '600',
-      letterSpacing: '10px',
+      fontSize: 28,
+      letterSpacing: 12,
     },
     h4: {
       fontSize: '24px',
