@@ -27,7 +27,7 @@ export const Header = () => {
             };
           }}
         >
-          <Typography variant="h3">{option}</Typography>
+          <Typography variant="h6">{option}</Typography>
         </NavLink>
       ))}
     </HeaderContainer>
