@@ -1,4 +1,4 @@
 export * from './App';
-export * from './enums';
 export * from './main';
+export * from './pages';
 export * from './styles';

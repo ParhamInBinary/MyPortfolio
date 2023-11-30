@@ -1,41 +1,34 @@
 import { Typography } from '@mui/material';
+import { NavLink } from 'react-router-dom';
 
 import { homeStrings } from '../../assets/strings';
 import { HeaderContainer } from './styles';
 
-interface IHeader {
-  currentPage: string;
-  setCurrentPage: React.Dispatch<React.SetStateAction<string>>;
-}
-
-export const Header = ({ currentPage, setCurrentPage }: IHeader) => {
+export const Header = () => {
+  const { header } = homeStrings;
   const headerOptions: string[] = [
-    homeStrings.header.home,
-    homeStrings.header.projects,
-    homeStrings.header.aboutMe,
-    homeStrings.header.resume,
-    homeStrings.header.contact,
+    header.home,
+    header.projects,
+    header.aboutMe,
+    header.resume,
+    header.contact,
   ];
-
-  const handleSwitchPage = (page: string) => {
-    if (page === currentPage) return;
-    setCurrentPage(page);
-  };
 
   return (
     <HeaderContainer>
       {headerOptions.map((option: string, index: number) => (
-        <Typography
-          variant="h3"
+        <NavLink
           key={index}
-          onClick={() => handleSwitchPage(option)}
-          sx={{
-            cursor: 'pointer',
-            textDecoration: currentPage === option ? 'underline' : 'none',
+          to={`/${option.toLocaleLowerCase()}`}
+          style={({ isActive }) => {
+            return {
+              textDecoration: isActive ? 'underline' : 'none',
+              color: '#FFF',
+            };
           }}
         >
-          {option}
-        </Typography>
+          <Typography variant="h3">{option}</Typography>
+        </NavLink>
       ))}
     </HeaderContainer>
   );
