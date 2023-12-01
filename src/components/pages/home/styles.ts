@@ -12,7 +12,7 @@ export const SubContainer = styled(Box)(() => ({
   alignItems: 'center',
   flex: 2,
   color: '#FFF',
-//   gap: '33%'
+  gap: '33%'
 }));
 
 export const NameBox = styled(Box)(() => ({

@@ -1,6 +1,6 @@
 import { Box, styled } from '@mui/material';
 
-import backgroundImage from './assets/images/background.png';
+import backgroundImage from './assets/images/file-gQI37C6d5FIBGFIuY8wvcXb7.png';
 
 export const Container = styled(Box)(() => ({
   display: 'flex',
