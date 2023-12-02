@@ -5,16 +5,19 @@ import {
   QualificationsComponent,
   WorkExpComponent,
 } from '../components';
-import { ResumeContainer } from './styles';
+import { OpacityBG, ResumeContainer } from './styles';
 
 export const ResumePage = () => {
   return (
-    <ResumeContainer>
-      <EducationComponent />
-      <Box sx={{ display: 'flex', flexDirection: 'column', flex: 1 }}>
-        <WorkExpComponent />
-        <QualificationsComponent />
-      </Box>
-    </ResumeContainer>
+    <>
+      <OpacityBG />
+      <ResumeContainer>
+        <EducationComponent />
+        <Box sx={{ display: 'flex', flexDirection: 'column', flex: 1 }}>
+          <WorkExpComponent />
+          <QualificationsComponent />
+        </Box>
+      </ResumeContainer>
+    </>
   );
 };
