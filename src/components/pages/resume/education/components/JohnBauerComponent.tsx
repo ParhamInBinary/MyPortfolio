@@ -6,7 +6,7 @@ export const JohnBauerComponent = () => {
   const { school } = resumeStrings;
   return (
     <>
-      <Box sx={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+      <Box sx={{ display: 'flex', flexDirection: 'column' }}>
         <Box>
           <Typography variant="h4">{school.johnBauer.title}</Typography>
           <Typography variant="h3">{school.johnBauer.date}</Typography>

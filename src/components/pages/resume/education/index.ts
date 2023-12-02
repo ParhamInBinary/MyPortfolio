@@ -1,3 +1,3 @@
+export * from '../styles';
 export * from './EducationComponent';
 export * from './components';
-export * from './styles';
