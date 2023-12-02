@@ -3,22 +3,18 @@ import { Box, Typography } from '@mui/material';
 import { resumeStrings } from '../../../../../assets/strings';
 
 export const JohnBauerComponent = () => {
-  const { school } = resumeStrings;
+  const { title, date, subtitle, courses } = resumeStrings.school.johnBauer;
   return (
     <>
       <Box sx={{ display: 'flex', flexDirection: 'column' }}>
         <Box>
-          <Typography variant="h4">{school.johnBauer.title}</Typography>
-          <Typography variant="h3">{school.johnBauer.date}</Typography>
-          <Typography variant="h2">{school.johnBauer.subtitle}</Typography>
+          <Typography variant="h4">{title}</Typography>
+          <Typography variant="h3">{date}</Typography>
+          <Typography variant="h2">{subtitle}</Typography>
         </Box>
 
-        <Typography variant="h2">
-          {school.johnBauer.courses.first.title}
-        </Typography>
-        <Typography variant="h2">
-          {school.johnBauer.courses.second.title}
-        </Typography>
+        <Typography variant="h2">{courses.first.title}</Typography>
+        <Typography variant="h2">{courses.second.title}</Typography>
       </Box>
     </>
   );
