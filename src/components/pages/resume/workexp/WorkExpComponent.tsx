@@ -1,15 +1,18 @@
-import { Typography } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 
 import { resumeStrings } from '../../../../assets/strings';
-import { ResumeCategoryContainer } from '../styles';
+import { ThreeHexagons } from '../../../hexagons';
 import { LunaComponent } from './components';
 
 export const WorkExpComponent = () => {
   const { workExp } = resumeStrings.title;
   return (
-    <ResumeCategoryContainer>
+    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
       <Typography variant="h5">{workExp}</Typography>
-      <LunaComponent />
-    </ResumeCategoryContainer>
+      <Box>
+        <LunaComponent />
+        <ThreeHexagons />
+      </Box>
+    </Box>
   );
 };

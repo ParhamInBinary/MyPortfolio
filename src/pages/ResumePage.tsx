@@ -1,8 +1,7 @@
-import { Box } from '@mui/material';
-
 import {
   EducationComponent,
   QualificationsComponent,
+  ResumeCategoryContainer,
   WorkExpComponent,
 } from '../components';
 import { OpacityBG, ResumeContainer } from './styles';
@@ -13,10 +12,10 @@ export const ResumePage = () => {
       <OpacityBG />
       <ResumeContainer>
         <EducationComponent />
-        <Box sx={{ display: 'flex', flexDirection: 'column', flex: 1 }}>
+        <ResumeCategoryContainer>
           <WorkExpComponent />
           <QualificationsComponent />
-        </Box>
+        </ResumeCategoryContainer>
       </ResumeContainer>
     </>
   );

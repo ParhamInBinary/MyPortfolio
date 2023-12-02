@@ -1,17 +1,17 @@
 import { Box, Typography } from '@mui/material';
 
 import { resumeStrings } from '../../../../assets/strings';
-import { ResumeCategoryContainer } from '../styles';
+import { ThreeHexagons } from '../../../hexagons';
 
 export const QualificationsComponent = () => {
   const { title, qualifications } = resumeStrings;
   return (
-    <ResumeCategoryContainer>
+    <Box
+      sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
+    >
       <Typography variant="h5">{title.qualifications}</Typography>
-      <Box>
-        
-      </Box>
       <Typography variant="h2">{qualifications.desc}</Typography>
-    </ResumeCategoryContainer>
+      <ThreeHexagons />
+    </Box>
   );
 };

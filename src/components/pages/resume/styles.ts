@@ -5,4 +5,5 @@ export const ResumeCategoryContainer = styled(Box)(() => ({
     flexDirection: 'column',
     flex: 1,
     alignItems: 'center',
+    padding: '0 50px'
 }));
