@@ -5,10 +5,10 @@ import { ResumeCategoryContainer } from '../styles';
 import { LunaComponent } from './components';
 
 export const WorkExpComponent = () => {
-  const { title, school, workExp, qualifications } = resumeStrings;
+  const { workExp } = resumeStrings.title;
   return (
     <ResumeCategoryContainer>
-      <Typography variant="h5">{title.workExp}</Typography>
+      <Typography variant="h5">{workExp}</Typography>
       <LunaComponent />
     </ResumeCategoryContainer>
   );
