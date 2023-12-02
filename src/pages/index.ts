@@ -4,3 +4,4 @@ export * from './HomePage';
 export * from './PageNotFound';
 export * from './ProjectsPage';
 export * from './ResumePage';
+export * from './styles';

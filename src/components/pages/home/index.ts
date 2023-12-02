@@ -1,1 +1,2 @@
-export * from './styles';
+export * from './slogan';
+export * from './subcontainer';
