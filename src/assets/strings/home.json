@@ -1,10 +1,25 @@
 {
   "header": {
-    "home": "HOME",
-    "projects": "PROJECTS",
-    "aboutMe": "ABOUT ME",
-    "resume": "RESUME",
-    "contact": "CONTACT"
+    "home": {
+      "displayName": "HOME",
+      "url": "/"
+    },
+    "projects": {
+      "displayName": "PROJECTS",
+      "url": "/projects"
+    },
+    "aboutMe": {
+      "displayName": "ABOUT ME",
+      "url": "/aboutme"
+    },
+    "resume": {
+      "displayName": "RESUME",
+      "url": "/resume"
+    },
+    "contact": {
+      "displayName": "CONTACT",
+      "url": "/contact"
+    }
   },
   "name": {
     "firstname": "PARHAM",

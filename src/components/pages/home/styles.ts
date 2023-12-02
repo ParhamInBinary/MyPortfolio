@@ -12,17 +12,20 @@ export const SubContainer = styled(Box)(() => ({
   alignItems: 'center',
   flex: 2,
   color: '#FFF',
-  gap: '33%'
+  gap: '38%'
 }));
 
 export const NameBox = styled(Box)(() => ({
   display: 'flex',
+  flex: 1,
   flexDirection: 'column',
   alignItems: 'flex-end',
+  marginLeft: 10
 }));
 
 export const RoleBox = styled(Box)(() => ({
   display: 'flex',
+  flex: 1,
   flexDirection: 'column',
   alignItems: 'flex-start',
 }));

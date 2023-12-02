@@ -17,28 +17,32 @@ import { customTheme } from './theme';
 
 const router = createBrowserRouter([
   {
-    path: '/',
     element: <App />,
     children: [
       {
-        path: '/home',
-        element: <HomePage />,
-      },
-      {
-        path: '/projects',
-        element: <ProjectsPage />,
-      },
-      {
-        path: '/aboutme',
-        element: <AboutMePage />,
-      },
-      {
-        path: '/resume',
-        element: <ResumePage />,
-      },
-      {
-        path: '/contact',
-        element: <ContactPage />,
+        path: '/',
+        children: [
+          {
+            index: true,
+            element: <HomePage />,
+          },
+          {
+            path: '/projects',
+            element: <ProjectsPage />,
+          },
+          {
+            path: '/aboutme',
+            element: <AboutMePage />,
+          },
+          {
+            path: '/resume',
+            element: <ResumePage />,
+          },
+          {
+            path: '/contact',
+            element: <ContactPage />,
+          },
+        ],
       },
       {
         path: '*',

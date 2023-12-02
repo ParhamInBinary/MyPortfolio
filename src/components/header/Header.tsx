@@ -5,21 +5,15 @@ import { homeStrings } from '../../assets/strings';
 import { HeaderContainer } from './styles';
 
 export const Header = () => {
-  const { header } = homeStrings;
-  const headerOptions: string[] = [
-    header.home,
-    header.projects,
-    header.aboutMe,
-    header.resume,
-    header.contact,
-  ];
+  const { home, projects, aboutMe, resume, contact } = homeStrings.header;
+  const headerOptions = [home, projects, aboutMe, resume, contact];
 
   return (
     <HeaderContainer>
-      {headerOptions.map((option: string, index: number) => (
+      {headerOptions.map((option, index: number) => (
         <NavLink
           key={index}
-          to={`/${option.toLocaleLowerCase()}`}
+          to={`${option.url}`}
           style={({ isActive }) => {
             return {
               textDecoration: isActive ? 'underline' : 'none',
@@ -27,7 +21,7 @@ export const Header = () => {
             };
           }}
         >
-          <Typography variant="h6">{option}</Typography>
+          <Typography variant="h6">{option.displayName}</Typography>
         </NavLink>
       ))}
     </HeaderContainer>
