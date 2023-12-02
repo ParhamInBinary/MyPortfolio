@@ -1,18 +1,6 @@
 import { createTheme } from '@mui/material/styles';
 
-// const googleFontsLink =
-//   'https://fonts.googleapis.com/css2?family=Dancing+Script&family=Kanit&family=Rajdhani&display=swap';
-
 export const customTheme = createTheme({
-  // palette: {
-  //   primary: {
-  //     main: '#1976d2', // Your primary color
-  //   },
-  //   secondary: {
-  //     main: '#f50057', // Your secondary color
-  //   },
-  //   // Add more customizations to the palette if needed
-  // },
   typography: {
     fontFamily: 'Kanit, sans-serif',
     h1: {
